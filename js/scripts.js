@@ -564,10 +564,10 @@ async function openInfo(marker) { // Create and show a Marker's InfoWindow
             }
 
             // Competition week (if available) list item
-            if (parsed.week) {
+            if (typeof parsed.week === 'number') {
                 var weekItem = document.createElement('li');
                 weekItem.innerHTML += '<strong>Week:</strong> ';
-                weekItem.appendChild(document.createTextNode(parsed.week));
+                weekItem.appendChild(document.createTextNode(parsed.week + 1));
                 list.appendChild(weekItem);
             }
 
